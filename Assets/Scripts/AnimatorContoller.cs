@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class AnimatorContoller : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class AnimatorContoller : MonoBehaviour
 
     private void Update()
     {
-        xAxis = Input.GetAxisRaw("Horizontal");
+        xAxis = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -120,7 +121,6 @@ public class AnimatorContoller : MonoBehaviour
                 {
                     ChangeAnimationState(PLAYER_JUMPATTACK);
                 }
-
                 Invoke("AttackComplete", attackDelay);
             }
         }
