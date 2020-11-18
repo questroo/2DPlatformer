@@ -46,12 +46,12 @@ public class AnimatorContoller : MonoBehaviour
     {
         xAxis = CrossPlatformInputManager.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (CrossPlatformInputManager.GetButtonDown("Jump"))
         {
             isJumpPressed = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (CrossPlatformInputManager.GetButtonDown("Attack"))
         {
             isAttackPressed = true;
         }
